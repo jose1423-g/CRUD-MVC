@@ -1,7 +1,8 @@
 <?php 
     namespace models;
+    use mysqli;
 
-    class estudiante{
+    class Estudiante{
         //atributos
         private $id;
         private $nombre;
@@ -14,6 +15,14 @@
 
         public function __construct(){
             $this->link = new conexion;
+        }
+
+        public function set($atributo, $contenido){
+            $this->$atributo = $contenido;
+        }
+
+        public function  get($atributo){
+            return $this->$atributo;
         }
 
         public function listar(){
@@ -41,8 +50,10 @@
 
         public function view(){
             $sql = "SELECT t1.*, t2.nombre as nombre_seccion FROM estudiantes t1 INNER JOIN secciones t2 ON 
-            t1.id_seccion = t2.id where id = '{$this->id}'";
+            t1.id_seccion = t2.id where t1.id = '{$this->id}'";
             $datos = $this->link->consultaRetorno($sql);
+            $row = mysqli_fetch_assoc($datos);
+            return $row;
         }
     }
 

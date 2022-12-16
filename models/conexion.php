@@ -1,10 +1,9 @@
 <?php
 
 namespace models;
+    use mysqli;
 
-use mysqli;
-
-    class conexion{
+    class Conexion{
         private $datos = array(
             "host" => "tu host",
             "user" => "tu usuario",
