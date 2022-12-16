@@ -1,14 +1,14 @@
 <?php
 
-namespace models;
+namespace Models;
     use mysqli;
 
     class Conexion{
         private $datos = array(
-            "host" => "tu host",
-            "user" => "tu usuario",
-            "pass" => "tu password",
-            "db" => "nombre de la base de datos"
+            "host" => "localhost",
+            "user" => "root",
+            "pass" => "",
+            "db" => "prueba"
         );
         private $link;
         
