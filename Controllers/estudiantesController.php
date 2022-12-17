@@ -2,7 +2,7 @@
 
 class estudiantesController{
     public function index(){
-        echo "hola";
+        echo "index estudiantesController";
     }
-
+    
 }
