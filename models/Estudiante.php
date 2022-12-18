@@ -26,7 +26,8 @@
         }
 
         public function listar(){
-            $sql= "SELECT t1.*, t2.nombre as nombre_seccion from estudiantes t1 INNER JOIN secciones t2 on t1.id_seccion = t2.id";
+            //$sql= "SELECT t1.*, t2.nombre as nombre_seccion from estudiantes t1 INNER JOIN secciones t2 on t1.id_seccion = t2.id";
+            $sql = "SELECT * FROM estudiantes";
             $datos = $this->link->consultaRetorno($sql);
             return $datos;
         }
