@@ -1,2 +1,2 @@
 
-<h3>VIsta estudiante principal</h3>
+<h3>Vista del estudiante principal</h3>

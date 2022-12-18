@@ -1,8 +1,9 @@
 <?php  namespace Controllers;
 
 class estudiantesController{
+    //metodo
     public function index(){
-        echo "index estudiantesController";
+        echo " ESTE ES EL ESTUDIANTES CONTROLLER ";
     }
     
 }

@@ -7,14 +7,11 @@
         $controlador = $request->getControlador() . "Controller";
         $ruta = ROOT . "Controllers" . DS . $controlador . ".php";
         $metodo = $request->getMetodo();
-        echo $ruta ."<br>";
-        
+
         if ($metodo == "index.php") {
             $metodo = "index";
-        }else{
-            echo "aqui perro";
         }
-        
+
         $argumento = $request->getArgumento();
         if (is_readable($ruta)) {
             require_once $ruta;
@@ -28,15 +25,13 @@
         }   
         
        //cargar vistas
-        //$ruta  = ROOT ."views". DS .$request->getControlador(). DS .$request->getMetodo(). ".php";
-        //print $ruta;
-        /*  
+        $ruta  = ROOT ."views". DS .$request->getControlador(). DS .$request->getMetodo(). ".php";
+        print $ruta."<br>";  
         if (is_readable($ruta)) {
             include_once $ruta;
         }else{
             print "no se puede";
         }
-*/
     }
 }
 
