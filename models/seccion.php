@@ -26,7 +26,7 @@ use mysqli;
         }
         
         public function add(){
-            $sql = "INSERT INTO secciones (id, nombre) VALUES (null,'{$this->nombre}')";
+            $sql = "INSERT INTO secciones (nombre) VALUES ('{$this->nombre}')";
             $this->link->consultaSimple($sql);
         }
 

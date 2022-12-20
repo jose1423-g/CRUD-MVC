@@ -17,7 +17,7 @@ namespace Models;
         }
 
         public function consultaSimple($sql){
-            $this->link->query($sql);
+           $this->link->query($sql);
         }
 
         public function consultaRetorno($sql){

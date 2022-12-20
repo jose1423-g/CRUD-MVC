@@ -10,7 +10,6 @@
         private $promedio;
         private $imagen;
         private $id_seccion;
-        private $fecha;
         private $link;
 
         public function __construct(){
@@ -33,8 +32,8 @@
         }
 
         public function add(){
-            $sql = "INSERT INTO estudiantes(id, nombre, edad, promedio, imagen, id_seccion, fecha) VALUES (null,
-            '{$this->nombre}','{$this->edad}','{$this->promedio}','{$this->imagen}','{$this->id_seccion}', NOW())";
+            $sql = "INSERT INTO estudiantes(nombre, edad, promedio, imagen, id_seccion)
+            VALUES('{$this->nombre}','{$this->edad}','{$this->promedio}','{$this->imagen}','{$this->id_seccion}')";
             $this->link->consultaSimple($sql);
         }
 
