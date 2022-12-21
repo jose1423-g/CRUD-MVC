@@ -34,14 +34,14 @@ class Template
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="http://localhost/CRUDMVC/estudiantes/">Inicio</a>
+                                <a class="nav-link" href="http://localhost/CRUDMVC/estudiantes">Inicio</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Estudiantes
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="http://localhost/CRUDMVC/estudiantes/">Lista</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/CRUDMVC/estudiantes">Lista</a></li>
                                     <li><a class="dropdown-item" href="http://localhost/CRUDMVC/estudiantes/agregar">Agregar</a></li>
                                 </ul>
                             </li>
@@ -50,7 +50,7 @@ class Template
                                     Secciones
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="http://localhost/CRUDMVC/secciones/">Listado</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/CRUDMVC/secciones">Listado</a></li>
                                     <li><a class="dropdown-item" href="http://localhost/CRUDMVC/secciones/agregar">Agregar</a></li>
                                 </ul>
                             </li>

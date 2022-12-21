@@ -25,8 +25,8 @@
         }
 
         public function listar(){
-            //$sql= "SELECT t1.*, t2.nombre as nombre_seccion from estudiantes t1 INNER JOIN secciones t2 on t1.id_seccion = t2.id";
-            $sql = "SELECT * FROM estudiantes";
+            $sql= "SELECT t1.*, t2.nombre as nombre_seccion from estudiantes t1 INNER JOIN secciones t2 on t1.id_seccion = t2.id";
+            //$sql = "SELECT * FROM estudiantes";
             $datos = $this->link->consultaRetorno($sql);
             return $datos;
         }
@@ -43,7 +43,7 @@
         }
 
         public function edit(){
-            $sql = "UPDATE estudiantes SET nombre = '{$this->nombre}', edad = '{$this->edad}', promedio = '{$this->promedio},
+            $sql = "UPDATE estudiantes SET nombre = '{$this->nombre}', edad = '{$this->edad}', promedio = '{$this->promedio}',
             id_seccion = '{$this->id_seccion}' WHERE id = '{$this->id}'";
             $this->link->consultaSimple($sql);
         }

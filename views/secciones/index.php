@@ -18,8 +18,8 @@
                    <td><?php echo $row['id'];?></td>
                    <td><?php echo $row['nombre'];?></td>
                    <td>
-                    <button class="btn btn-warning">EDITAR</button>
-                    <button class="btn btn-danger">ELIMINAR</button> 
+                   <a class="text-white text-decoration-none btn btn-warning" href="http://localhost/CRUDMVC/secciones/editar/<?php echo $row['id']?>">EDITAR</a>
+                   <a class="text-white text-decoration-none btn btn-danger" href="http://localhost/CRUDMVC/secciones/eliminar/<?php echo $row['id']?>">ELIMINAR</a> 
                   </td>
                 </tr>
                <?php } ?>

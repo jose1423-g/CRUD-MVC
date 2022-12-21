@@ -37,11 +37,40 @@ class estudiantesController{
                 $this->estudiante->set("imagen", $nombre);
                 $this->estudiante->set("id_seccion", $_POST['id_seccion']);
                 $this->estudiante->add();
-                header("Location:". URL. "/estudiantes");       
+                header("Location:". URL. "estudiantes");       
             }
         }
     }
+    //responde al formulario editar le pasamos como parametro el id del usuario
+    public function editar($id){
+        if (!$_POST) {   
+            $this->estudiante->set("id", $id);
+            $datos = $this->estudiante->view();
+            return $datos;
+        }else{
+            $this->estudiante->set("id", $_POST['id']);
+            $this->estudiante->set("nombre", $_POST['nombre']);
+            $this->estudiante->set("edad", $_POST['edad']);
+            $this->estudiante->set("promedio", $_POST['promedio']);
+            $this->estudiante->set("id_seccion", $_POST['id_seccion']);
+            $this->estudiante->edit();
+            header("Location:". URL. "estudiantes");       
+        }
+    }
 
+    public function eliminar($id){
+        $this->estudiante->set("id", $id);
+        $this->estudiante->delete();
+        header("Location:". URL. "estudiantes");       
+    }
+
+    //lista las secciones en el archivo editar de estudiantes;
+    public function listarSecciones(){
+        $datos = $this->seccion->listar();
+        return $datos;
+    }
 }
+
+$estudiantes = new estudiantesController();
 
 ?>
