@@ -5,7 +5,7 @@
     public static function run(Request $request){
 
         $controlador = $request->getControlador() . "Controller";//obtenemos el controlador con la funcion getControlador 
-        $ruta = ROOT . "Controllers" . DS . $controlador . ".php";//creamos una ruta 
+        $ruta = ROOT . "Controllers"  . DS . $controlador . ".php";//creamos una ruta 
         $metodo = $request->getMetodo();//obtenemos el metodo de la funcion getMetodo
 
         if ($metodo == "index.php") {
