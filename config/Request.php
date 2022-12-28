@@ -7,7 +7,7 @@
         
         public  function __construct(){
             if (isset($_GET['url'])) {//si la variable url esta declarda es true en caso contrario false
-                $ruta = filter_input(INPUT_GET, 'url', FILTER_SANITIZE_URL);
+                $ruta = filter_input(INPUT_GET, 'url', FILTER_SANITIZE_URL);//Obtiene una variable externa específica por nombre y, opcionalmente, la filtra
                 $ruta = explode("/", $ruta);//divide un string en varios string.
                 $ruta = array_filter($ruta);//Filtra elementos de un array usando una función de devolución de llamada
 
