@@ -1,7 +1,7 @@
 <?php
 
-namespace Models;
-    use mysqli;
+    namespace Models;
+        use mysqli;
 
     class Conexion{
         private $datos = array(
@@ -10,6 +10,7 @@ namespace Models;
             "pass" => "",
             "db" => "prueba"
         );
+
         private $link;
         
         public function __construct(){

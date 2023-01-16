@@ -6,9 +6,10 @@ use mysqli;
     class Seccion{
         private $id;
         private $nombre;
-
+        private $link;
+        
         public function __construct(){
-            $this->link = new Conexion();
+            $this->link = new conexion;
         }
         
         public function set($atributo, $contenido){
