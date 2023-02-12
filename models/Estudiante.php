@@ -5,7 +5,7 @@
     class Estudiante{
         //atributos
         private $id;
-        private $nombre;
+        public  $nombre;
         private $edad;
         private $promedio;
         private $imagen;

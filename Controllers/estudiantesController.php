@@ -8,9 +8,11 @@ class estudiantesController{
     private $estudiante;
     private $seccion;
 
+    
     public function __construct(){
         $this->estudiante = new Estudiante();
         $this->seccion = new Seccion;
+
     }
     
     //metodo
@@ -21,7 +23,7 @@ class estudiantesController{
  
     public function agregar(){
         if(!$_POST){
-            $datos = $this->seccion->listar();
+            $datos = $this->estudiante->listar();
             return $datos;
         }else{
             $permitidos = array("image/jpeg","image/png","image/gif","image/jpg");
